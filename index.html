@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Lim - IoT Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span class="logo-text">Portofolio</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link" data-nav="home">Beranda</a>
+                    <a href="#about" class="nav-link" data-nav="about">Tentang</a>
+                    <a href="#skills" class="nav-link" data-nav="skills">Keahlian</a>
+                    <a href="#projects" class="nav-link" data-nav="projects">Proyek</a>
+                    <a href="#contact" class="nav-link" data-nav="contact">Kontak</a>
+                    <button class="language-btn" id="languageBtn">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <span id="currentLang">ID</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="mobile-nav">
+                    <button class="language-btn" id="languageBtnMobile">
+                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <span id="currentLangMobile">ID</span>
+                    </button>
+                    <button class="menu-btn" id="menuBtn">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Sidebar -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-menu-link" data-nav="home">Beranda</a>
+            <a href="#about" class="mobile-menu-link" data-nav="about">Tentang</a>
+            <a href="#skills" class="mobile-menu-link" data-nav="skills">Keahlian</a>
+            <a href="#projects" class="mobile-menu-link" data-nav="projects">Proyek</a>
+            <a href="#contact" class="mobile-menu-link" data-nav="contact">Kontak</a>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-greeting" data-text="hero.greeting">Halo, Saya</p>
+                    <h1 class="hero-name">
+                        <span data-text="hero.name">William Lim</span>
+                    </h1>
+                    <h2 class="hero-title" data-text="hero.title">Insinyur IoT</h2>
+                    <p class="hero-description" data-text="hero.description">
+                        Bersemangat dalam membangun solusi yang dapat diskalakan dan teknologi inovatif. Spesialisasi dalam infrastruktur cloud, pengembangan full-stack, dan arsitektur sistem.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary" data-text="hero.getInTouch">Hubungi Saya</a>
+                        <a href="#projects" class="btn btn-secondary" data-text="hero.viewProjects">Lihat Proyek</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-text="about.title">Tentang Saya</h2>
+                    <p class="section-description" data-text="about.description">
+                        Saya adalah Insinyur Teknologi IT dengan passion untuk menyelesaikan tantangan teknis yang kompleks. Keahlian saya mencakup komputasi awan, DevOps, dan pengembangan full-stack. Saya berkembang dalam menciptakan solusi yang efisien dan dapat diskalakan yang mendorong nilai bisnis.
+                    </p>
+                </div>
+
+                <div class="about-cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            <h3 data-text="about.experienceYears">5+ Tahun</h3>
+                            <p data-text="about.experience">Pengalaman Profesional</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            <h3 data-text="about.projectsCount">20+ Proyek</h3>
+                            <p data-text="about.projects">Berhasil Diselesaikan</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                            <h3 data-text="about.certifiedTitle">Bersertifikat</h3>
+                            <p data-text="about.certified">Profesional AWS & Azure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-text="skills.title">Keahlian & Kompetensi</h2>
+                    <p class="section-description" data-text="skills.description">
+                        Kumpulan keterampilan teknis yang komprehensif yang dibangun melalui pengalaman praktis bertahun-tahun
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-text="skills.frontend">Pengembangan Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Vue.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-text="skills.backend">Pengembangan Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-text="skills.database">Basis Data</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-text="skills.cloud">Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-text="skills.tools">Alat & Kontrol Versi</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Jira</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-text="skills.other">Keterampilan Lainnya</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Scrum</span>
+                            <span class="skill-tag">System Design</span>
+                            <span class="skill-tag">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-text="projects.title">Proyek Unggulan</h2>
+                    <p class="section-description" data-text="projects.description">
+                        Pilihan proyek yang menampilkan keahlian teknis dan kemampuan pemecahan masalah saya
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 data-text="projects.project1.title">Platform Infrastruktur Cloud</h3>
+                            <p data-text="projects.project1.description">
+                                Membangun platform manajemen infrastruktur cloud yang dapat diskalakan menggunakan layanan AWS, mengurangi waktu deployment sebesar 60%.
+                            </p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
+                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 data-text="projects.project2.title">Aplikasi Web Enterprise</h3>
+                            <p data-text="projects.project2.description">
+                                Mengembangkan solusi enterprise full-stack yang menangani 100k+ pengguna harian dengan sinkronisasi data real-time.
+                            </p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
+                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 data-text="projects.project3.title">Suite Otomasi DevOps</h3>
+                            <p data-text="projects.project3.description">
+                                Menciptakan pipeline CI/CD otomatis dan solusi monitoring yang meningkatkan frekuensi deployment sebesar 80%.
+                            </p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
+                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-text="contact.title">Hubungi Saya</h2>
+                    <p class="section-description" data-text="contact.description">
+                        Punya proyek dalam pikiran atau ingin mendiskusikan peluang? Jangan ragu untuk menghubungi!
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <h4 data-text="contact.email">Email</h4>
+                                <p>william.lim@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <h4 data-text="contact.phone">Telepon</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <h4 data-text="contact.location">Lokasi</h4>
+                                <p data-text="contact.locationValue">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h3 data-text="contact.form.title">Kirim Pesan</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label data-text="contact.form.name">Nama</label>
+                                <input type="text" data-placeholder="contact.form.namePlaceholder" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-text="contact.form.email">Email</label>
+                                <input type="email" data-placeholder="contact.form.emailPlaceholder" placeholder="email.anda@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-text="contact.form.subject">Subjek</label>
+                                <input type="text" data-placeholder="contact.form.subjectPlaceholder" placeholder="Tentang apa ini?" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-text="contact.form.message">Pesan</label>
+                                <textarea rows="5" data-placeholder="contact.form.messagePlaceholder" placeholder="Pesan Anda..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" data-text="contact.form.send">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footerText">© 2024 William Lim. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
