@@ -607,6 +607,25 @@ body::before{
     max-width: 280px;
     margin: 0 auto;
   }
+
+
+  /* Shrink project card on mobile */
+  .wendo-carousel .wcard {
+    width: 250px;             
+    padding: 0.8rem;
+    border-radius: 14px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Shrink the project image */
+  .wendo-carousel .wcard .wimg {
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin: 0 auto 0.5rem auto;
+  }
 }
 
 @keyframes fadeInPage {
