@@ -594,7 +594,7 @@ body::before{
   /* NEW FIXES YOU REQUESTED                */
   /* -------------------------------------- */
 
-  /* 1. Center the 3 info-cards properly */
+  /* 1. Center all 3 info-cards properly */
   .info-cards {
     display: flex;
     flex-wrap: wrap;
@@ -608,18 +608,29 @@ body::before{
     margin: 0 auto;
   }
 
-  /* 2. Reduce project_title size on mobile */
+  /* 2. Keep project title the same size – do not reduce */
   .project_title {
-    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 0.8rem;
   }
 
-  /* Reduce project card spacing so it doesn't look oversized */
+  /* 3. Shrink project-card size on mobile */
   .project-card {
-    padding: 1rem 1rem;
+    width: 100%;
+    max-width: 300px;     /* shrink width */
+    margin: 0 auto;       /* center card */
+    padding: 0.9rem 0.9rem; /* reduce padding */
+    border-radius: 14px;    /* optional: slightly smaller corners */
+  }
+
+  /* If project-card contains images, shrink them too */
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 }
+
 
 
 @keyframes fadeInPage {
