@@ -641,6 +641,7 @@ body::before{
     border-radius: 12px;
   }
 }
+}
 
 @keyframes fadeInPage {
   from { opacity: 0; transform: translateY(10px); }
