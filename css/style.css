@@ -622,24 +622,24 @@ body::before{
 
   /* .wcard.left {
     left: 0 !important; 
-    transform: translateX(-10px) !important;
-    opacity: 1 !important;
-    z-index: 1;
-  } */
+    transform: translateX(-10px) !important; */
+    opacity: 0 !important;
+    /* z-index: 1; */
+  }
 
   .wcard.center {
-    left: 55% !important;
+    left: 52% !important;
     transform: translateX(-50%) !important;
     opacity: 1 !important;
     z-index: 2;
   }
 
-  /* .wcard.right {
-    left: calc(100% - 260px) !important;
-    transform: translateX(10px) !important;
-    opacity: 1 !important;
-    z-index: 1;
-  }  */
+  .wcard.right {
+    /* left: calc(100% - 260px) !important;
+    transform: translateX(10px) !important; */
+    opacity: 0 !important;
+    /* z-index: 1; */
+  } 
 }
 
 @keyframes fadeInPage {
