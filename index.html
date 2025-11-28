@@ -1,341 +1,440 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Lim - IoT Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>William Lim — Portfolio</title>
+
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#home" class="logo">
-                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                    <span class="logo-text">Portofolio</span>
-                </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner header-glass">
+      <div class="brand" data-i18n="brand_title">&lt;/&gt; Portfolio</div>
 
-                <!-- Desktop Navigation -->
-                <div class="nav-links desktop-nav">
-                    <a href="#home" class="nav-link" data-nav="home">Beranda</a>
-                    <a href="#about" class="nav-link" data-nav="about">Tentang</a>
-                    <a href="#skills" class="nav-link" data-nav="skills">Keahlian</a>
-                    <a href="#projects" class="nav-link" data-nav="projects">Proyek</a>
-                    <a href="#contact" class="nav-link" data-nav="contact">Kontak</a>
-                    <button class="language-btn" id="languageBtn">
-                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        <span id="currentLang">ID</span>
-                    </button>
-                </div>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" data-i18n="home">Home</a>
+        <a href="#about" data-i18n="about">About</a>
+        <a href="#skills" data-i18n="skills">Skills</a>
+        <a href="#projects" data-i18n="projects">Projects</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+      </nav>
 
-                <!-- Mobile Navigation -->
-                <div class="mobile-nav">
-                    <button class="language-btn" id="languageBtnMobile">
-                        <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        <span id="currentLangMobile">ID</span>
-                    </button>
-                    <button class="menu-btn" id="menuBtn">
-                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Sidebar -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-content">
-            <a href="#home" class="mobile-menu-link" data-nav="home">Beranda</a>
-            <a href="#about" class="mobile-menu-link" data-nav="about">Tentang</a>
-            <a href="#skills" class="mobile-menu-link" data-nav="skills">Keahlian</a>
-            <a href="#projects" class="mobile-menu-link" data-nav="projects">Proyek</a>
-            <a href="#contact" class="mobile-menu-link" data-nav="contact">Kontak</a>
-        </div>
+      <div class="header-actions">
+        <button id="langBtn" class="lang-btn" aria-label="change language">EN</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="menu">☰</button>
+      </div>
     </div>
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-greeting" data-text="hero.greeting">Halo, Saya</p>
-                    <h1 class="hero-name">
-                        <span data-text="hero.name">William Lim</span>
-                    </h1>
-                    <h2 class="hero-title" data-text="hero.title">Insinyur IoT</h2>
-                    <p class="hero-description" data-text="hero.description">
-                        Bersemangat dalam membangun solusi yang dapat diskalakan dan teknologi inovatif. Spesialisasi dalam infrastruktur cloud, pengembangan full-stack, dan arsitektur sistem.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary" data-text="hero.getInTouch">Hubungi Saya</a>
-                        <a href="#projects" class="btn btn-secondary" data-text="hero.viewProjects">Lihat Proyek</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-text="about.title">Tentang Saya</h2>
-                    <p class="section-description" data-text="about.description">
-                        Saya adalah Insinyur Teknologi IT dengan passion untuk menyelesaikan tantangan teknis yang kompleks. Keahlian saya mencakup komputasi awan, DevOps, dan pengembangan full-stack. Saya berkembang dalam menciptakan solusi yang efisien dan dapat diskalakan yang mendorong nilai bisnis.
-                    </p>
-                </div>
-
-                <div class="about-cards">
-                    <div class="card">
-                        <div class="card-content">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg>
-                            <h3 data-text="about.experienceYears">5+ Tahun</h3>
-                            <p data-text="about.experience">Pengalaman Profesional</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="8" r="7"></circle>
-                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                            </svg>
-                            <h3 data-text="about.projectsCount">20+ Proyek</h3>
-                            <p data-text="about.projects">Berhasil Diselesaikan</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                            <h3 data-text="about.certifiedTitle">Bersertifikat</h3>
-                            <p data-text="about.certified">Profesional AWS & Azure</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-text="skills.title">Keahlian & Kompetensi</h2>
-                    <p class="section-description" data-text="skills.description">
-                        Kumpulan keterampilan teknis yang komprehensif yang dibangun melalui pengalaman praktis bertahun-tahun
-                    </p>
-                </div>
-
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3 data-text="skills.frontend">Pengembangan Frontend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">Next.js</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                            <span class="skill-tag">Vue.js</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 data-text="skills.backend">Pengembangan Backend</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Go</span>
-                            <span class="skill-tag">REST APIs</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 data-text="skills.database">Basis Data</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Redis</span>
-                            <span class="skill-tag">MySQL</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 data-text="skills.cloud">Cloud & DevOps</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Azure</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">CI/CD</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 data-text="skills.tools">Alat & Kontrol Versi</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">GitHub</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Jira</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3 data-text="skills.other">Keterampilan Lainnya</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Agile</span>
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">System Design</span>
-                            <span class="skill-tag">Microservices</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-text="projects.title">Proyek Unggulan</h2>
-                    <p class="section-description" data-text="projects.description">
-                        Pilihan proyek yang menampilkan keahlian teknis dan kemampuan pemecahan masalah saya
-                    </p>
-                </div>
-
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 data-text="projects.project1.title">Platform Infrastruktur Cloud</h3>
-                            <p data-text="projects.project1.description">
-                                Membangun platform manajemen infrastruktur cloud yang dapat diskalakan menggunakan layanan AWS, mengurangi waktu deployment sebesar 60%.
-                            </p>
-                            <div class="project-actions">
-                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
-                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 data-text="projects.project2.title">Aplikasi Web Enterprise</h3>
-                            <p data-text="projects.project2.description">
-                                Mengembangkan solusi enterprise full-stack yang menangani 100k+ pengguna harian dengan sinkronisasi data real-time.
-                            </p>
-                            <div class="project-actions">
-                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
-                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 data-text="projects.project3.title">Suite Otomasi DevOps</h3>
-                            <p data-text="projects.project3.description">
-                                Menciptakan pipeline CI/CD otomatis dan solusi monitoring yang meningkatkan frekuensi deployment sebesar 80%.
-                            </p>
-                            <div class="project-actions">
-                                <a href="#" class="project-link" data-text="projects.code">Kode</a>
-                                <a href="#" class="project-link" data-text="projects.demo">Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-text="contact.title">Hubungi Saya</h2>
-                    <p class="section-description" data-text="contact.description">
-                        Punya proyek dalam pikiran atau ingin mendiskusikan peluang? Jangan ragu untuk menghubungi!
-                    </p>
-                </div>
-
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <div>
-                                <h4 data-text="contact.email">Email</h4>
-                                <p>william.lim@example.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <div>
-                                <h4 data-text="contact.phone">Telepon</h4>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <div>
-                                <h4 data-text="contact.location">Lokasi</h4>
-                                <p data-text="contact.locationValue">San Francisco, CA</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-wrapper">
-                        <h3 data-text="contact.form.title">Kirim Pesan</h3>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-group">
-                                <label data-text="contact.form.name">Nama</label>
-                                <input type="text" data-placeholder="contact.form.namePlaceholder" placeholder="Nama Anda" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-text="contact.form.email">Email</label>
-                                <input type="email" data-placeholder="contact.form.emailPlaceholder" placeholder="email.anda@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-text="contact.form.subject">Subjek</label>
-                                <input type="text" data-placeholder="contact.form.subjectPlaceholder" placeholder="Tentang apa ini?" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-text="contact.form.message">Pesan</label>
-                                <textarea rows="5" data-placeholder="contact.form.messagePlaceholder" placeholder="Pesan Anda..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block" data-text="contact.form.send">Kirim Pesan</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p id="footerText">© 2024 William Lim. Hak cipta dilindungi.</p>
+  <main class="fade">
+    <!-- HERO -->
+    <section id="home" class="section hero-section">
+      <div class="container glass-card hero-grid">
+        <div class="hero-left">
+          <p class="greeting" data-i18n="greeting">Hello, I am</p>
+          <h1 class="name" data-i18n="name">William Lim</h1>
+          <p class="title" data-i18n="title">IoT Engineer • Computer Vision • Embedded Systems</p>
+          <p class="lead" data-i18n="lead">
+            Hardworking, passionate, and self-motivated professional with experience in IoT systems, computer vision, embedded development, and full system integration. I build reliable, scalable, and intelligent solutions that connect hardware, software, and AI.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#contact" data-i18n="btn_contact">Contact Me</a>
+            <a class="btn ghost" href="#projects" data-i18n="btn_projects">View Projects</a>
+          </div>
         </div>
-    </footer>
+        <div class="hero-right">
+          <div class="panel-grid">
+            <!-- <div class="screen screen-1"></div>
+            <div class="screen screen-2"></div> -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container glass-card about-inner">
+        <h2 class="center" data-i18n="about_title">About Me</h2>
+
+        <p class="muted center" data-i18n="about_desc">
+          I’m an engineer specializing in IoT, computer vision, and embedded systems. I’ve built solutions ranging from human and vehicle detection to cloud-connected IoT devices. With experience in AI, system design, mobile apps, and PCB development, I enjoy creating smart and efficient technologies.
+        </p>
+
+        <div class="info-cards">
+
+          <!-- EXPERIENCE -->
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+              </svg>
+            </div>
+            <strong>6 Years</strong>
+            <span>of Experience</span>
+          </div>
+
+          <!-- PROJECTS -->
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+            </div>
+            <strong>10+ Projects</strong>
+            <span>Successfully Delivered</span>
+          </div>
+
+          <!-- CERTIFICATIONS -->
+          <div class="info-card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+                <path d="M22 10v6"></path>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+              </svg>
+            </div>
+            <strong>Certification: </strong>
+            <span>Python Institute (PCAP), AWS Builders Series, Docker Foundations Professional</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container glass-card">
+        <h2 class="center" data-i18n="skills_title">Skills</h2>
+        <p class="muted center" data-i18n="skills_sub">
+          A comprehensive skillset built through real-world experience.
+        </p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                  width="24" height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  class="icon">
+                  
+                <path d="m18 16 4-4-4-4"></path>
+                <path d="m6 8-4 4 4 4"></path>
+                <path d="m14.5 4-5 16"></path>
+              </svg>
+              <h3>Programming & Software Development</h3>
+            </div>
+            <div class="tags">
+              <span>Python</span>
+              <span>C / C++ / C#</span>
+              <span>MATLAB</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>HTML / CSS / JS</span>
+              <span>Django Framework</span>
+              <span>Qt Framework</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-head">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon"
+                  aria-hidden="true">
+
+                <path d="M12 20v2"></path>
+                <path d="M12 2v2"></path>
+                <path d="M17 20v2"></path>
+                <path d="M17 2v2"></path>
+                <path d="M2 12h2"></path>
+                <path d="M2 17h2"></path>
+                <path d="M2 7h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="M20 17h2"></path>
+                <path d="M20 7h2"></path>
+                <path d="M7 20v2"></path>
+                <path d="M7 2v2"></path>
+
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <rect x="8" y="8" width="8" height="8" rx="1"></rect>
+
+              </svg>
+              <h3>IoT, Embedded Systems & Hardware</h3>
+            </div>
+            <div class="tags">
+              <span>IoT hardware module configuration</span>
+              <span>Electronic circuit development</span>
+              <span>Prototype assembly & testing</span>
+              <span>Sensor calibration and integration</span>
+              <span>Embedded firmware implementation</span>
+              <span>End-to-end hardware–software integration</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-head">
+              <svg class="icon" viewBox="0 0 24 24" 
+                  fill="none" stroke="currentColor" 
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+
+                <!-- Neural nodes left -->
+                <circle cx="4" cy="8" r="2"></circle>
+                <circle cx="4" cy="16" r="2"></circle>
+
+                <!-- Neural nodes center -->
+                <circle cx="12" cy="5" r="2"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+                <circle cx="12" cy="19" r="2"></circle>
+
+                <!-- Neural nodes right -->
+                <circle cx="20" cy="8" r="2"></circle>
+                <circle cx="20" cy="16" r="2"></circle>
+
+                <!-- Connections -->
+                <line x1="6" y1="8" x2="10" y2="5"></line>
+                <line x1="6" y1="8" x2="10" y2="12"></line>
+                <line x1="6" y1="16" x2="10" y2="12"></line>
+                <line x1="6" y1="16" x2="10" y2="19"></line>
+
+                <line x1="14" y1="5" x2="18" y2="8"></line>
+                <line x1="14" y1="12" x2="18" y2="8"></line>
+                <line x1="14" y1="12" x2="18" y2="16"></line>
+                <line x1="14" y1="19" x2="18" y2="16"></line>
+
+              </svg>
+
+              <h3>AI, Computer Vision & GPU Acceleration</h3>
+            </div>
+            <div class="tags">
+              <span>TensorFlow</span>
+              <span>PyTorch</span>
+              <span>Keras</span>
+              <span>TensorRT</span>
+              <span>CUDA</span>
+              <span>Stable Diffusion</span>
+              <span>NVIDIA Framework</span>
+              <span>Face Detection & Recognition</span> 
+              <span>Vehicle Detection & Recognition</span> 
+              <span>Crowd Detection</span> 
+              <span>Optical character recognition</span> 
+              <span>Lisence Plate Recognition</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-head">
+              <svg class="icon" viewBox="0 0 24 24" 
+                  fill="none" stroke="currentColor" 
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+              <h3>Cloud & DevOps</h3>
+            </div>
+            <div class="tags">
+              <span>AWS</span>
+              <span>Linux / Ubuntu</span>
+              <span>Docker</span>
+              <span>REST API Development</span>
+              <span>Jupyter / Google Colab</span>
+              <span>Web Deployment</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-head">
+              <svg class="icon" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+              <h3>3D Design, Simulation & Graphics</h3>
+            </div>
+            <div class="tags">
+              <span>AutoCAD</span>
+              <span>Inventor</span>
+              <span>Blender</span>
+              <span>Unity</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="card-head">
+               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 12h12M6 8h12M6 16h8" stroke="currentColor" fill="none"/>
+              </svg>
+              <h3>Management, Operations & Other Skills</h3>
+            </div>
+            <div class="tags">
+              <span>Project Management</span>
+              <span>Technical Team Coordination</span>
+              <span>Site Inspections</span>
+              <span>Documentation & Reporting</span>
+              <span>Troubleshooting</span>
+              <span>Workflow Planning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / CAROUSEL -->
+    <section id="projects" class="section">
+      <div class="container glass-card">
+        <h2 class="center" data-i18n="project_title">Featured Projects</h2>
+        <p class="muted center" data-i18n="project_desc">
+          A curated selection of projects that demonstrate my engineering experience.
+        </p>
+
+        <div class="wendo-carousel" id="wCarousel">
+          <div class="wcard">
+            <div class="wimg ps-1"></div>
+            <h3 data-i18n="p1_title">PCB Flight Controller</h3>
+            <p data-i18n="p1_desc">This project creating a custom flight controller based the CUAV series, published on 
+                                    GitHub. The design is made using EasyEDA for the schematics and PCB layout.
+            </p>
+          </div>
+
+          <div class="wcard">
+            <div class="wimg ps-2"></div>
+            <h3 data-i18n="p2_title">Thermal Camera Systems</h3>
+            <p data-i18n="p2_desc">Developed an enterprise full-stack web application with real-time sync.</p>
+          </div>
+
+          <div class="wcard">
+            <div class="wimg ps-3"></div>
+            <h3 data-i18n="p3_title">Advertisement Human Crowd Detection</h3>
+            <p data-i18n="p3_desc">Development of a human detection system tailored for advertisement displays in 
+                                  elevators to detect and count individuals in real-time. When the nearest 
+                                  individuals view the ads, the content changes based on the individual's age and 
+                                  gender with 85% confidence.
+            </p>
+          </div>
+
+          <div class="wcard">
+            <div class="wimg ps-4"></div>
+            <h3 data-i18n="p4_title">Vehicle Traffic Detection</h3>
+            <p data-i18n="p4_desc">The detection system also serves for advertisement billboards to ascertain the 
+                                    number of vehicles in a certain area, and it can be remotely streamed. Moreover, the 
+                                    detection zone (coordinate lines) can be customized through a web interface hosted 
+                                    on the server, which is accessible via a secure VPN connection. This feature allows 
+                                    users to easily define and adjust the vehicle detection areas based on the 
+                                    deployment environment without direct physical access.
+            </p>
+          </div>
+
+          <div class="wcard">
+            <div class="wimg ps-5"></div>
+            <h3 data-i18n="p5_title">License Plate Recognition</h3>
+            <p data-i18n="p5_desc">This system is designed to automatically recognize and extract vehicle license plate 
+                                    numbers, primarily for use in parking management services. It streamlines vehicle 
+                                    entry and exit processes by capturing plate information in real time, reducing the 
+                                    need for manual input. In addition to parking applications, the system can also be 
+                                    adapted for traffic monitoring, security access control, and other scenarios where 
+                                    automated vehicle identification is required.
+            </p>
+          </div>
+
+          <div class="wcard">
+            <div class="wimg ps-6"></div>
+            <h3 data-i18n="p6_title">QGroundControl - Translation Indonesian Version</h3>
+            <p data-i18n="p6_desc">The project involves localizing the QGroundControl (QGC) ground station software 
+                                    into the Indonesian language to improve accessibility for native speakers in 
+                                    Indonesia. QGroundControl is an open-source UAV control and planning software 
+                                    used globally by drone enthusiasts and professionals.
+            </p>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container glass-card">
+        <h2 class="center" data-i18n="contact_title">Get In Touch</h2>
+        <p class="muted center" data-i18n="contact_desc">
+          Have a project or want to discuss an opportunity? Reach out!
+        </p>
+        
+        <div class="contact-cards">
+          <!-- EMAIL -->
+          <div class="contact-card">
+            <div class="icon" style="margin-bottom: 0.6rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-mail">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+            </div>
+            <strong>Email</strong>
+            <a href="mailto:william00lim.wl@gmail.com">
+              william00lim.wl@gmail.com
+            </a>
+          </div>
+
+          <!-- PHONE -->
+          <div class="contact-card">
+            <div class="icon" style="margin-bottom: 0.6rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-phone">
+                <path
+                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                </path>
+              </svg>
+            </div>
+            <strong>Phone</strong>
+            <a href="tel:+628974253558">
+              +62 897-4253-558
+            </a>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="contact-card">
+            <div class="icon" style="margin-bottom: 0.6rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-map-pin">
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                </path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <strong>Location</strong>
+            <a href="https://maps.app.goo.gl/CNCNT4AL5vzCAMAe9" target="_blank" rel="noopener">
+              Tangerang, Indonesia
+            </a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p data-i18n="footer">Copyright © 2025 William Lim. All rights reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
