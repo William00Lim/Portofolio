@@ -600,7 +600,7 @@ body::before{
     height: 550px;       
     padding: 0.9rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.95);;
     border-radius: 16px;
   }
 
