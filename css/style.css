@@ -545,7 +545,7 @@ body::before{
 
   .wcard{
     /* Override desktop layout */
-    width: 85% !important;        /* responsive width */
+    width: 90% !important;        /* responsive width */
     max-width: 340px;             /* perfect for mobile */
     position: absolute;
     left: 50% !important;
