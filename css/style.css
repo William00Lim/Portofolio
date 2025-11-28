@@ -609,10 +609,11 @@ body::before{
   }
 
   .wendo-carousel .wcard {
-    max-width: 250px;
+    max-width: 150px;
     padding: 0.8rem;       
     border-radius: 14px;
     margin: 0 auto;
+    text-align: center;
   }
 }
 
