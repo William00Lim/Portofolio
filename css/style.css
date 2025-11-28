@@ -611,8 +611,8 @@ body::before{
 
   /* Description text */
   .wendo-carousel .wcard p {
-    line-height: 1.25;
     text-align: left;
+    overflow-wrap: break-word;
   }
 
   /* .wcard.left {
