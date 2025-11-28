@@ -610,11 +610,9 @@ body::before{
 
 @media (max-width:750px) {
 
-@media (max-width:750px) {
-
   /* Increase Wendo Carousel card size by 35% */
   .wendo-carousel .wcard {
-    width: 230px;        /* was 170px */
+    width: 250px;        /* was 170px */
     padding: 0.75rem;    
     border-radius: 14px;
   }
@@ -635,8 +633,8 @@ body::before{
   /* Increase image size by 35% */
   .wendo-carousel .wcard .wimg {
     width: 100%;
-    max-width: 135px;   /* was 100px */
-    height: 95px;       /* was 70px */
+    max-width: 175px;   /* was 100px */
+    height: 125px;       /* was 70px */
     margin: 0 auto 0.6rem auto;
     background-size: cover;
     background-position: center;
