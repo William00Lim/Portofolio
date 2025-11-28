@@ -607,15 +607,6 @@ body::before{
     max-width: 280px;
     margin: 0 auto;
   }
-
-  /* Shrink project card on mobile */
-  .wendo-carousel .wcard {
-    width: 450px;
-    padding: 0.8rem;
-    border-radius: 14px;
-    margin: 0 auto;
-    text-align: center;
-  }
 }
 
 @keyframes fadeInPage {
