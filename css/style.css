@@ -605,12 +605,14 @@ body::before{
 
   /* Title text */
   .wendo-carousel .wcard h3 {
+    font-size: 1rem;
     text-align: center;
     overflow-wrap: break-word;
   }
 
   /* Description text */
   .wendo-carousel .wcard p {
+    font-size: 0.85rem;
     line-height: 1;
     text-align: left;
     overflow-wrap: break-word;
