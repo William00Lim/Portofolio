@@ -1,353 +1,622 @@
-// Translations
-const translations = {
-    en: {
-        nav: {
-            home: "Home",
-            about: "About",
-            skills: "Skills",
-            projects: "Projects",
-            contact: "Contact",
-        },
-        hero: {
-            greeting: "Hello, I'm",
-            name: "William Lim",
-            title: "IoT Engineer",
-            description: "Passionate about building scalable solutions and innovative technologies. Specialized in cloud infrastructure, full-stack development, and system architecture.",
-            getInTouch: "Get in Touch",
-            viewProjects: "View Projects",
-        },
-        about: {
-            title: "About Me",
-            description: "I'm an IT Tech Engineer with a passion for solving complex technical challenges. My expertise spans across cloud computing, DevOps, and full-stack development. I thrive on creating efficient, scalable solutions that drive business value.",
-            experience: "Professional Experience",
-            experienceYears: "5+ Years",
-            projects: "Successfully Delivered",
-            projectsCount: "20+ Projects",
-            certified: "AWS & Azure Professional",
-            certifiedTitle: "Certified",
-        },
-        skills: {
-            title: "Skills & Expertise",
-            description: "A comprehensive set of technical skills built through years of hands-on experience",
-            frontend: "Frontend Development",
-            backend: "Backend Development",
-            database: "Database",
-            cloud: "Cloud & DevOps",
-            tools: "Tools & Version Control",
-            other: "Other Skills",
-        },
-        projects: {
-            title: "Featured Projects",
-            description: "A selection of projects that showcase my technical expertise and problem-solving abilities",
-            project1: {
-                title: "Cloud Infrastructure Platform",
-                description: "Built a scalable cloud infrastructure management platform using AWS services, reducing deployment time by 60%.",
-            },
-            project2: {
-                title: "Enterprise Web Application",
-                description: "Developed a full-stack enterprise solution handling 100k+ daily users with real-time data synchronization.",
-            },
-            project3: {
-                title: "DevOps Automation Suite",
-                description: "Created automated CI/CD pipelines and monitoring solutions improving deployment frequency by 80%.",
-            },
-            code: "Code",
-            demo: "Demo",
-        },
-        contact: {
-            title: "Get In Touch",
-            description: "Have a project in mind or want to discuss opportunities? Feel free to reach out!",
-            email: "Email",
-            phone: "Phone",
-            location: "Location",
-            locationValue: "San Francisco, CA",
-            form: {
-                title: "Send a Message",
-                name: "Name",
-                namePlaceholder: "Your name",
-                email: "Email",
-                emailPlaceholder: "your.email@example.com",
-                subject: "Subject",
-                subjectPlaceholder: "What's this about?",
-                message: "Message",
-                messagePlaceholder: "Your message...",
-                send: "Send Message",
-            },
-        },
-        footer: {
-            copyright: "© 2024 William Lim. All rights reserved.",
-        },
-    },
-    jp: {
-        nav: {
-            home: "ホーム",
-            about: "私について",
-            skills: "スキル",
-            projects: "プロジェクト",
-            contact: "お問い合わせ",
-        },
-        hero: {
-            greeting: "こんにちは、",
-            name: "ウィリアム・リム",
-            title: "IoTエンジニア",
-            description: "スケーラブルなソリューションと革新的な技術の構築に情熱を注いでいます。クラウドインフラ、フルスタック開発、システムアーキテクチャを専門としています。",
-            getInTouch: "お問い合わせ",
-            viewProjects: "プロジェクトを見る",
-        },
-        about: {
-            title: "私について",
-            description: "複雑な技術的課題を解決することに情熱を持つITエンジニアです。クラウドコンピューティング、DevOps、フルスタック開発にわたる専門知識を持ち、ビジネス価値を生み出す効率的でスケーラブルなソリューションの作成に力を注いでいます。",
-            experience: "実務経験",
-            experienceYears: "5年以上",
-            projects: "成功したプロジェクト",
-            projectsCount: "20以上のプロジェクト",
-            certified: "AWS & Azure認定",
-            certifiedTitle: "認定資格",
-        },
-        skills: {
-            title: "スキルと専門知識",
-            description: "長年の実践経験を通じて培われた包括的な技術スキル",
-            frontend: "フロントエンド開発",
-            backend: "バックエンド開発",
-            database: "データベース",
-            cloud: "クラウド & DevOps",
-            tools: "ツール & バージョン管理",
-            other: "その他のスキル",
-        },
-        projects: {
-            title: "注目のプロジェクト",
-            description: "技術的専門知識と問題解決能力を示すプロジェクトの選集",
-            project1: {
-                title: "クラウドインフラプラットフォーム",
-                description: "AWSサービスを使用してスケーラブルなクラウドインフラ管理プラットフォームを構築し、デプロイ時間を60％削減しました。",
-            },
-            project2: {
-                title: "エンタープライズWebアプリケーション",
-                description: "リアルタイムデータ同期を備え、10万人以上の日次ユーザーを処理するフルスタックエンタープライズソリューションを開発しました。",
-            },
-            project3: {
-                title: "DevOps自動化スイート",
-                description: "自動化されたCI/CDパイプラインと監視ソリューションを作成し、デプロイ頻度を80％改善しました。",
-            },
-            code: "コード",
-            demo: "デモ",
-        },
-        contact: {
-            title: "お問い合わせ",
-            description: "プロジェクトのアイデアや機会について話し合いたいですか？お気軽にご連絡ください！",
-            email: "メール",
-            phone: "電話",
-            location: "所在地",
-            locationValue: "サンフランシスコ、カリフォルニア",
-            form: {
-                title: "メッセージを送信",
-                name: "お名前",
-                namePlaceholder: "お名前を入力",
-                email: "メールアドレス",
-                emailPlaceholder: "your.email@example.com",
-                subject: "件名",
-                subjectPlaceholder: "用件について",
-                message: "メッセージ",
-                messagePlaceholder: "メッセージを入力...",
-                send: "送信する",
-            },
-        },
-        footer: {
-            copyright: "© 2024 William Lim。全著作権所有。",
-        },
-    },
-    id: {
-        nav: {
-            home: "Beranda",
-            about: "Tentang",
-            skills: "Keahlian",
-            projects: "Proyek",
-            contact: "Kontak",
-        },
-        hero: {
-            greeting: "Halo, Saya",
-            name: "William Lim",
-            title: "Insinyur IoT",
-            description: "Bersemangat dalam membangun solusi yang dapat diskalakan dan teknologi inovatif. Spesialisasi dalam infrastruktur cloud, pengembangan full-stack, dan arsitektur sistem.",
-            getInTouch: "Hubungi Saya",
-            viewProjects: "Lihat Proyek",
-        },
-        about: {
-            title: "Tentang Saya",
-            description: "Saya adalah Insinyur Teknologi IT dengan passion untuk menyelesaikan tantangan teknis yang kompleks. Keahlian saya mencakup komputasi awan, DevOps, dan pengembangan full-stack. Saya berkembang dalam menciptakan solusi yang efisien dan dapat diskalakan yang mendorong nilai bisnis.",
-            experience: "Pengalaman Profesional",
-            experienceYears: "5+ Tahun",
-            projects: "Berhasil Diselesaikan",
-            projectsCount: "20+ Proyek",
-            certified: "Profesional AWS & Azure",
-            certifiedTitle: "Bersertifikat",
-        },
-        skills: {
-            title: "Keahlian & Kompetensi",
-            description: "Kumpulan keterampilan teknis yang komprehensif yang dibangun melalui pengalaman praktis bertahun-tahun",
-            frontend: "Pengembangan Frontend",
-            backend: "Pengembangan Backend",
-            database: "Basis Data",
-            cloud: "Cloud & DevOps",
-            tools: "Alat & Kontrol Versi",
-            other: "Keterampilan Lainnya",
-        },
-        projects: {
-            title: "Proyek Unggulan",
-            description: "Pilihan proyek yang menampilkan keahlian teknis dan kemampuan pemecahan masalah saya",
-            project1: {
-                title: "Platform Infrastruktur Cloud",
-                description: "Membangun platform manajemen infrastruktur cloud yang dapat diskalakan menggunakan layanan AWS, mengurangi waktu deployment sebesar 60%.",
-            },
-            project2: {
-                title: "Aplikasi Web Enterprise",
-                description: "Mengembangkan solusi enterprise full-stack yang menangani 100k+ pengguna harian dengan sinkronisasi data real-time.",
-            },
-            project3: {
-                title: "Suite Otomasi DevOps",
-                description: "Menciptakan pipeline CI/CD otomatis dan solusi monitoring yang meningkatkan frekuensi deployment sebesar 80%.",
-            },
-            code: "Kode",
-            demo: "Demo",
-        },
-        contact: {
-            title: "Hubungi Saya",
-            description: "Punya proyek dalam pikiran atau ingin mendiskusikan peluang? Jangan ragu untuk menghubungi!",
-            email: "Email",
-            phone: "Telepon",
-            location: "Lokasi",
-            locationValue: "San Francisco, CA",
-            form: {
-                title: "Kirim Pesan",
-                name: "Nama",
-                namePlaceholder: "Nama Anda",
-                email: "Email",
-                emailPlaceholder: "email.anda@example.com",
-                subject: "Subjek",
-                subjectPlaceholder: "Tentang apa ini?",
-                message: "Pesan",
-                messagePlaceholder: "Pesan Anda...",
-                send: "Kirim Pesan",
-            },
-        },
-        footer: {
-            copyright: "© 2024 William Lim. Hak cipta dilindungi.",
-        },
-    },
-};
-
-// Language State
-let currentLanguage = 'id'; // Start with Indonesian
-const languageOrder = ['id', 'en', 'jp']; // Cycle order: ID -> EN -> JP -> ID
-
-// Helper function to get nested value from object using dot notation
-function getNestedValue(obj, path) {
-    return path.split('.').reduce((current, key) => current?.[key], obj);
+:root{
+  --bg:#02030a;
+  --bg-soft:#050818;
+  --muted:#a0a0b5;
+  --card:rgba(255,255,255,0.04);
+  --card-strong:rgba(255,255,255,0.08);
+  --accent:#f5f5ff;
+  --primary:#f5f5ff;
+  --pill-bg:rgba(255,255,255,0.05);
+  --border-soft:rgba(255,255,255,0.10);
+  --container:1100px;
+  --radius:20px;
 }
 
-// Update all text content based on current language
-function updateContent() {
-    const currentTranslations = translations[currentLanguage];
-    
-    // Update all elements with data-text attribute
-    document.querySelectorAll('[data-text]').forEach(element => {
-        const key = element.getAttribute('data-text');
-        const value = getNestedValue(currentTranslations, key);
-        if (value) {
-            element.textContent = value;
-        }
-    });
-    
-    // Update all elements with data-placeholder attribute
-    document.querySelectorAll('[data-placeholder]').forEach(element => {
-        const key = element.getAttribute('data-placeholder');
-        const value = getNestedValue(currentTranslations, key);
-        if (value) {
-            element.placeholder = value;
-        }
-    });
-    
-    // Update navigation links
-    document.querySelectorAll('[data-nav]').forEach(element => {
-        const key = element.getAttribute('data-nav');
-        const value = currentTranslations.nav[key];
-        if (value) {
-            element.textContent = value;
-        }
-    });
-    
-    // Update footer with HTML support (for bold text in Indonesian)
-    const footerText = document.getElementById('footerText');
-    if (footerText) {
-        footerText.innerHTML = currentTranslations.footer.copyright;
-    }
-    
-    // Update language button display
-    const langMap = { 'id': 'ID', 'en': 'EN', 'jp': 'JP' };
-    document.getElementById('currentLang').textContent = langMap[currentLanguage];
-    document.getElementById('currentLangMobile').textContent = langMap[currentLanguage];
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-// Switch to next language in cycle
-function switchLanguage() {
-    const currentIndex = languageOrder.indexOf(currentLanguage);
-    const nextIndex = (currentIndex + 1) % languageOrder.length;
-    currentLanguage = languageOrder[nextIndex];
-    updateContent();
+/* MAIN FADE-IN ONLY */
+main.fade {
+  opacity: 0;
+  animation: fadeInPage 0.5s ease forwards;
+  animation-delay: 0.25s;
 }
 
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const overlay = document.getElementById('mobileMenuOverlay');
-    
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
+  color:#f9f9ff;
+  min-height:100vh;
+  overflow-x:hidden;
+  background:radial-gradient(circle at top left,#12121f 0%,#05030a 55%);
+  transform:translateZ(0);
+  position:relative;
 }
 
-function closeMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    const overlay = document.getElementById('mobileMenuOverlay');
-    
-    mobileMenu.classList.remove('active');
-    overlay.classList.remove('active');
+/* Subtle noise */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:0.10;
+  mix-blend-mode:soft-light;
+  background-image:url("https://grainy-gradients.vercel.app/noise.png");
+  z-index:-1;
 }
 
-// Event Listeners
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize content
-    updateContent();
-    
-    // Language switcher buttons
-    document.getElementById('languageBtn').addEventListener('click', switchLanguage);
-    document.getElementById('languageBtnMobile').addEventListener('click', switchLanguage);
-    
-    // Mobile menu
-    document.getElementById('menuBtn').addEventListener('click', toggleMobileMenu);
-    document.getElementById('mobileMenuOverlay').addEventListener('click', closeMobileMenu);
-    
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.mobile-menu-link').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
-    
-    // Contact form submission
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Form submission is a demo. In production, this would send your message.');
-    });
-    
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:1.75rem 1.75rem;
+}
+
+/* HEADER */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.header-glass{
+  margin-top:0.75rem;
+  padding:0.6rem 1.5rem;
+  border-radius:999px;
+  background:rgba(6,8,20,0.78);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:0 10px 28px rgba(0,0,0,0.35);
+}
+
+.brand{
+  font-weight:600;
+  letter-spacing:0.04em;
+  font-size:0.95rem;
+  color:#fdfdff;
+}
+
+.main-nav{
+  display:flex;
+  gap:1.4rem;
+}
+
+.main-nav a{
+  color:#f0f0ff;
+  opacity:0.7;
+  text-decoration:none;
+  font-size:0.9rem;
+  padding:0.35rem 0;
+  position:relative;
+  transition:opacity .25s ease;
+}
+
+.main-nav a:hover{
+  opacity:1;
+}
+
+.main-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,#f6f3ff,#52b6ff);
+  border-radius:99px;
+  transition:width .25s;
+}
+
+.main-nav a.active::after{
+  width:100%;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+}
+
+.lang-btn{
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(255,255,255,0.05);
+  color:#f5f5ff;
+  font-size:0.8rem;
+  cursor:pointer;
+  backdrop-filter:blur(4px);
+}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:0;
+  font-size:1.2rem;
+  color:#f5f5ff;
+}
+
+/* SECTIONS & CARDS */
+.section{
+  padding:5rem 0 4rem;
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.06);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 14px 40px rgba(0,0,0,0.45);
+}
+
+/* HERO */
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:2.5rem;
+  align-items:center;
+  padding:2.5rem 2.3rem;
+}
+
+.hero-left .greeting{
+  color:var(--muted);
+  font-size:0.95rem;
+  margin-bottom:.2rem;
+}
+
+.hero-left .name{
+  font-size:2.5rem;
+  margin:.2rem 0;
+}
+
+.hero-left .title{
+  color:var(--muted);
+  margin-bottom:1rem;
+}
+
+.lead{
+  max-width:46ch;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.cta{
+  margin-top:1.4rem;
+  display:flex;
+  gap:.8rem;
+}
+
+.btn{
+  padding:.65rem 1.2rem;
+  border-radius:999px;
+  text-decoration:none;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.18);
+  color:var(--primary);
+  cursor:pointer;
+  font-size:0.9rem;
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,#f5f0ff,#3ea6ff);
+  color:#020312;
+  border-color:transparent;
+  box-shadow:0 12px 30px rgba(0,0,0,0.7);
+}
+
+.btn.ghost{
+  background:rgba(3,7,18,0.8);
+}
+
+.hero-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.panel-grid{
+  width:100%;
+  max-width:420px;
+  height:320px;
+  border-radius:26px;
+
+  background-image: url("../img/will0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding:24px;
+  box-shadow:0 14px 42px rgba(0,0,0,0.55);
+  position:relative;
+  will-change:transform;
+}
+
+
+.screen{
+  position:absolute;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:#111827;
+  box-shadow:0 10px 28px rgba(0,0,0,0.45);
+  will-change:transform;
+}
+
+/* .screen-1 {
+  top:24px;
+  right:20px;
+  width:62%;
+  height:68%;
+  transform:rotate(-3deg);
+
+  background-image: url("../img/will1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.screen-2 {
+  bottom:18px;
+  left:20px;
+  width:70%;
+  height:56%;
+  transform:rotate(3deg);
+
+  background-image: url("../img/will2.jpg");
+  background-size: cover;
+  background-position: center;
+} */
+
+/* TYPOGRAPHY */
+.center{text-align:center;}
+
+.muted{
+  color:var(--muted);
+  margin:0.5rem auto 0;
+  max-width:70ch;
+}
+
+.title{
+  font-size:1.6rem;
+  margin-bottom:0.5rem;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-bottom:1.5rem;
+}
+
+/* ABOUT */
+.about-inner{
+  padding:2.4rem 2.3rem 2.8rem;
+}
+
+.info-cards{
+  display:flex;
+  gap:1.1rem;
+  margin-top:1.9rem;
+}
+
+.info-card{
+  flex:1;
+  background:rgba(0,0,0,0.4);
+  padding:1.5rem 1.25rem;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 16px 45px rgba(0,0,0,0.75);
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.info-card .icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 0.75rem auto;
+}
+
+.info-card .icon svg{
+  width:40px;
+  height:40px;
+}
+
+/* SKILLS */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+  margin-top:1.6rem;
+}
+
+.skill-card{
+  background:rgba(2,6,23,0.92);
+  border-radius:var(--radius);
+  padding:1.3rem 1.2rem;
+  border:1px solid rgba(148,163,184,0.22);
+  box-shadow:0 10px 28px rgba(15,23,42,0.55);
+  min-height:150px;
+  overflow:hidden;
+  position:relative;
+  will-change:transform;
+}
+
+.skill-card::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:radial-gradient(circle at top,rgba(59,130,246,0.15),transparent 55%);
+  opacity:0;
+  transition:opacity .25s ease;
+}
+
+.skill-card:hover::before{
+  opacity:1;
+}
+
+.skill-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-head{
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+  margin-bottom:0.8rem;
+  position:relative;
+  z-index:1;
+}
+
+.icon{
+  width:38px;
+  height:38px;
+  color:var(--accent);
+}
+
+.card-head h3{
+  font-size:1rem;
+  color:#f9fafb;
+  font-weight:600;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.45rem;
+  margin-top:auto;
+  position:relative;
+  z-index:1;
+}
+
+.tags span{
+  background:var(--pill-bg);
+  padding:0.35rem 0.6rem;
+  border-radius:999px;
+  font-size:0.8rem;
+  border:1px solid rgba(148,163,184,0.4);
+  color:#e5e7eb;
+}
+
+/* Add gap below project description before carousel */
+#projects .muted {
+  margin-bottom: 1rem;  /* adjust value to your preference */
+}
+
+/* PROJECT CAROUSEL — RESTORED GLASS STYLE + WIDER SPACING */
+.wendo-carousel{
+  position:relative;
+  width:100%;
+  height:650px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  cursor:grab;
+  user-select:none;
+}
+
+.wcard{
+  position:absolute;
+  width:450px;
+  padding:1.5rem;
+  
+  /* restored strong card style */
+  background:rgba(255,255,255,0.1); /* less transparent */
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.5);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 18px 42px rgba(0,0,0,0.5);
+
+  opacity:0;
+  transform:scale(0.7) translateY(40px);
+  transition:transform .38s ease, opacity .38s ease, left .38s ease;
+  will-change:transform, opacity, left;
+}
+
+/* LEFT CARD — push further left */
+.wcard.left{
+  left:calc(50% - 535px);     /* wider spacing */
+  opacity:0.3;
+  transform:scale(0.86) translateY(10px);
+  z-index:2;
+}
+
+/* CENTER CARD — strong pop */
+.wcard.center{
+  left:calc(50% - 225px);
+  opacity:1;
+  transform:scale(1.16) translateY(0);
+  z-index:5;
+
+  background:rgba(10,10,20,0.75);  /* 90% opaque */
+  border:1px solid rgba(255,255,255,0.50);
+  backdrop-filter:blur(50px);
+}
+
+/* RIGHT CARD — push further right */
+.wcard.right{
+  left:calc(50% + 80px);      /* wider spacing */
+  opacity:0.3;
+  transform:scale(0.86) translateY(10px);
+  z-index:2;
+}
+
+/* Any other hidden cards */
+.wcard.hidden{
+  opacity:0;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* Center title ALWAYS */
+.wcard h3 {
+  text-align: center !important;
+  margin-bottom: 0.5rem;
+}
+
+/* Description ALWAYS LEFT */
+.wcard p {
+  text-align: left !important;
+  line-height: 1.45;
+}
+
+.wimg{
+  width:100%;
+  height:250px;
+  border-radius:16px;
+  margin-bottom:1rem;
+  background-size:cover;
+  background-position:center;
+}
+
+.ps-1{background-image: url("../img/x5.jpg")}
+.ps-2{background-image: url("../img/x0.jpg")}
+.ps-3{background-image: url("../img/x1.jpg")}
+.ps-4{background-image: url("../img/x2.jpg")}
+.ps-5{background-image: url("../img/x3.jpg")}
+.ps-6{background-image: url("../img/x4.jpg")}
+
+.contact-cards {
+  display: flex;
+  gap: 1.1rem;
+  margin: 1.8rem 0 2rem;
+}
+
+.contact-card {
+  flex: 1;
+  background: rgba(2, 6, 23, 0.96);
+  padding: 1.6rem 1.2rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(15,23,42,1);
+  border: 1px solid rgba(148,163,184,0.7);
+}
+
+.contact-card .icon {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 0.75rem auto;
+}
+
+.contact-card .icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.contact-card a {
+  display: block;
+  margin-top: 0.4rem;
+  color: #e5e7eb;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .contact-cards {
+    flex-direction: column;
+  }
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer{
+  text-align:center;
+  color:var(--muted);
+  margin-top:2.2rem;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr 1fr;}
+  .skills-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:700px){
+  .container{padding:1.25rem 1.1rem;}
+  .main-nav{
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    display:none;
+    flex-direction:column;
+    gap:0.6rem;
+    padding:0.8rem 1.2rem;
+    background:rgba(6,8,20,0.96);
+    border-bottom:1px solid rgba(148,163,184,0.45);
+  }
+  .main-nav.open{display:flex;}
+  .menu-toggle{display:inline-block;}
+
+  .skills-grid{grid-template-columns:1fr;}
+  /* keep contact cards in a row even on smaller screens */
+  .row{flex-direction:column;}
+  .contact-form{padding:1.2rem 1rem;}
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* SUCCESS MESSAGE POPUP */
+.msg-success {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(10, 20, 35, 0.92);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.35s ease;
+  z-index: 999999;
+}
+
+.msg-success.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.msg-success.hidden {
+  display: none;
+}
