@@ -560,7 +560,7 @@ body::before{
 }
 
 /* ========== MOBILE FIX: RESET DESKTOP CAROUSEL ========== */
-@media (max-width:750px){
+@media (max-width:768px){
 
   /* Wendo carousel: allow auto height, not fixed 650px */
   .wendo-carousel{
@@ -586,7 +586,6 @@ body::before{
     left: 0 !important;
     opacity: 1 !important;
 
-    min-height: 420px;           /* MOBILE HEIGHT */
     height: auto;                /* grow with content */
   }
 
