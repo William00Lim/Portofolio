@@ -585,7 +585,8 @@ body::before{
 
   /* WENDO CAROUSEL CARDS */
   .wendo-carousel .wcard{
-    height: auto;
+    min-height: 450px;   /* increase card height */
+    height: auto;        /* allow it to grow with content */
     position:absolute;
     padding:0.9rem;
     left:50%;
@@ -598,6 +599,7 @@ body::before{
 
   /* TEXT INSIDE WCARD */
   .wendo-carousel .wcard h3{
+    height: auto;
     text-align:center;
     overflow-wrap:break-word;
   }
