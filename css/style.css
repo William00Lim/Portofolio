@@ -602,14 +602,14 @@ body::before{
   }
   
   /* Shrink and center/right-shift wcard on mobile */
-  /* .wendo-carousel .wcard {
+  .wendo-carousel .wcard {
     width: 300px;         
     height: 400px;       
     padding: 0.9rem;
     left: 50%;          
     transform: translateX(-45%) scale(0.9);  
     border-radius: 16px;
-  } */
+  }
 
   /* Title text */
   .wendo-carousel .wcard h3 {
@@ -626,15 +626,13 @@ body::before{
     overflow-wrap: break-word;
   }
 
-  /* LEFT CARD — move slightly left */
-  .wcard.left {
-    left: 0 !important;              /* align a bit left */
+  /* .wcard.left {
+    left: 0 !important; 
     transform: translateX(-10px) !important;
     opacity: 1 !important;
     z-index: 1;
   }
 
-  /* CENTER CARD — place in the center */
   .wcard.center {
     left: 50% !important;
     transform: translateX(-50%) !important;
@@ -642,13 +640,12 @@ body::before{
     z-index: 2;
   }
 
-  /* RIGHT CARD — move slightly right */
   .wcard.right {
-    left: calc(100% - 260px) !important;  /* card width */
+    left: calc(100% - 260px) !important;
     transform: translateX(10px) !important;
     opacity: 1 !important;
     z-index: 1;
-  }
+  } */
 }
 
 @keyframes fadeInPage {
