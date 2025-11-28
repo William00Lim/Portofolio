@@ -610,15 +610,24 @@ body::before{
   
   /* Title size (slight increase only) */
   .wendo-carousel .wcard h3 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-align: center;
   }
 
   /* Description text */
   .wendo-carousel .wcard p {
-    font-size: 0.65rem;
-    line-height: 1.25;
+    font-size: 0.5rem;
+    line-height: 1;
     text-align: left;
+  }
+
+  /* Increase image size by ~35% */
+  .wendo-carousel .wcard .wimg {
+    height: 150px;            /* 70px → +35% = ~95px */
+    margin: 0 auto 0.6rem auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
   }
 }
 
