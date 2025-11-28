@@ -583,11 +583,6 @@ body::before{
   .row{flex-direction:column;}
   .contact-form{padding:1.2rem 1rem;}
 
-  /* -------------------------------------- */
-  /* NEW FIXES YOU REQUESTED                */
-  /* -------------------------------------- */
-
-  /* 1. Center all 3 info-cards properly */
   .info-cards {
     display: flex;
     flex-wrap: wrap;
@@ -601,15 +596,12 @@ body::before{
     margin: 0 auto;
   }
   
-  /* Shrink and center/right-shift wcard on mobile */
-  /* .wendo-carousel .wcard {
+  .wendo-carousel .wcard {
     width: 300px;         
     height: 400px;       
     padding: 0.9rem;
-    left: 50%;          
-    transform: translateX(-45%) scale(0.9);
     border-radius: 16px;
-  } */
+  }
 
   /* Title text */
   .wendo-carousel .wcard h3 {
@@ -621,7 +613,6 @@ body::before{
   .wendo-carousel .wcard p {
     line-height: 1.25;
     text-align: left;
-    overflow-wrap: break-word;
   }
 
   /* .wcard.left {
