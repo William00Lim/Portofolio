@@ -608,10 +608,9 @@ body::before{
     margin: 0 auto;
   }
 
-
   /* Shrink project card on mobile */
   .wendo-carousel .wcard {
-    width: 250px;             
+    width: 150px;              /* 30% smaller */
     padding: 0.8rem;
     border-radius: 14px;
     margin: 0 auto;
@@ -620,12 +619,25 @@ body::before{
   
   /* Shrink the project image */
   .wendo-carousel .wcard .wimg {
-    width: 150px;
+    width: 50px;               /* 30% smaller image */
+    height: 50px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
     margin: 0 auto 0.5rem auto;
   }
+  
+  /* Reduce text size so card can shrink properly */
+  .wendo-carousel .wcard h3 {
+    font-size: 0.9rem;         /* smaller title */
+    line-height: 1.2;
+  }
+  
+  .wendo-carousel .wcard p {
+    font-size: 0.75rem;        /* smaller text */
+    line-height: 1.25;
+  }
+
 }
 
 @keyframes fadeInPage {
