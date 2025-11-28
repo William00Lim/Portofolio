@@ -597,10 +597,10 @@ body::before{
   }
   
   .wendo-carousel .wcard {      
-    height: 450px;       
+    height: 500px;       
     padding: 0.9rem;
     left: 50%;
-    transform: translateX(-49%) scale(0.95);
+    transform: translateX(-50%);
     border-radius: 16px;
   }
 
@@ -615,15 +615,8 @@ body::before{
   .wendo-carousel .wcard p {
     font-size: 0.85rem;
     line-height: 1;
-    text-align: left;
+    text-align: center;
     overflow-wrap: break-word;
-  }
-
-  .wcard.left {
-    /* left: 0 !important;
-    transform: translateX(-10px) !important; */
-    opacity: 0 !important;
-    /* z-index: 1; */
   }
 
   .wcard.center {
@@ -635,13 +628,6 @@ body::before{
     border:1px solid rgba(255,255,255,0.50);
     backdrop-filter:blur(50px);
   }
-
-  .wcard.right {
-    /* left: calc(100% - 260px) !important;
-    transform: translateX(10px) !important; */
-    opacity: 0 !important;
-    /* z-index: 1; */
-  } 
 }
 
 @keyframes fadeInPage {
