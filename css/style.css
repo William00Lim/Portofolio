@@ -609,21 +609,22 @@ body::before{
   }
   
   .wendo-carousel .wcard {
-    height: 300px;
     width: 350px;
     padding: 0.7rem;
     border-radius: 14px;
   }
 
   .wendo-carousel .wcard h3 {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     text-align: center;
+    overflow-wrap: break-word; 
   }
   
   .wendo-carousel .wcard p {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     line-height: 1;
     text-align: left;
+    overflow-wrap: break-word; 
   }
 }
 
